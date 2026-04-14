@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Boda | Valeria & Diego</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#1a1a2e;
+  --gold:#e0b973;
+  --soft:#f8f5f0;
+}
+
+/* BASE */
+body{
+  font-family:'Montserrat', sans-serif;
+}
+
+/* TITULOS */
+h1,h2,h3{
+  font-family:'Cormorant Garamond', serif;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:url("https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  text-align:center;
+  position:relative;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+.hero-content{position:relative; z-index:2;}
+
+/* SECCIONES */
+.section{
+  padding:100px 20px;
+}
+
+.bg-dark-custom{
+  background:var(--primary);
+  color:white;
+}
+
+.bg-light-custom{
+  background:var(--soft);
+}
+
+.bg-gold{
+  background:linear-gradient(135deg,#fff,#f3e5c0);
+}
+
+/* BOTON */
+.btn-gold{
+  background:var(--gold);
+  border:none;
+  font-weight:bold;
+}
+
+/* GALERIA */
+.gallery img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  border-radius:10px;
+  transition:.3s;
+}
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* TIMELINE */
+.timeline{
+  border-left:3px solid var(--gold);
+  padding-left:20px;
+}
+.timeline div{
+  margin-bottom:20px;
+}
+
+/* COUNTDOWN */
+.count{
+  font-size:2rem;
+  font-weight:bold;
+  color:var(--gold);
+}
+
+/* ANIMACIONES */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:.8s;
+}
+.fade.show{
+  opacity:1;
+  transform:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-content">
+<h1>Valeria & Diego</h1>
+<p>¡Nos Casamos!</p>
+<p>20 de Marzo 2027</p>
+<a href="#confirmar" class="btn btn-gold mt-3">Confirmar asistencia</a>
+</div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="section text-center bg-light-custom">
+<h2>Faltan</h2>
+<div id="countdown" class="count"></div>
+</section>
+
+<!-- HISTORIA -->
+<section class="section bg-white text-center fade">
+<h2>Nuestra Historia</h2>
+<p class="w-75 mx-auto">
+Nuestro amor comenzó como una coincidencia inesperada...
+y hoy celebramos una vida juntos llena de sueños, risas y promesas.
+</p>
+</section>
+
+<!-- EVENTO -->
+<section class="section bg-dark-custom fade">
+<div class="container">
+<h2 class="text-center">Programa del Evento</h2>
+
+<div class="timeline mt-5">
+<div><b>3:00 PM</b> - Ceremonia religiosa</div>
+<div><b>5:00 PM</b> - Recepción</div>
+<div><b>6:00 PM</b> - Cena</div>
+<div><b>8:00 PM</b> - Baile</div>
+<div><b>11:00 PM</b> - Pastel 🎂</div>
+</div>
+</div>
+</section>
+
+<!-- DRESS CODE -->
+<section class="section bg-gold text-center fade">
+<h2>Dress Code</h2>
+<p>Formal elegante</p>
+<p>Colores sugeridos: beige, dorado, negro</p>
+</section>
+
+<!-- GALERIA -->
+<section class="section bg-light-custom fade">
+<div class="container">
+<h2 class="text-center">Galería</h2>
+
+<div class="row gallery mt-4">
+<div class="col-md-4"><img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
+<div class="col-md-4"><img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
+<div class="col-md-4"><img src="https://plus.unsplash.com/premium_photo-1675719847698-6c8a924b2a7a?q=80&w=469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
+</div>
+</div>
+</section>
+
+<!-- UBICACION -->
+<section class="section bg-white text-center fade">
+<h2>Ubicación</h2>
+<p>Salón Los Jardines</p>
+
+<iframe src="https://www.google.com/maps?q=Zitacuaro&output=embed"
+width="100%" height="300"></iframe>
+</section>
+
+<!-- REGALOS -->
+<section class="section bg-dark-custom text-center fade">
+<h2>Mesa de Regalos</h2>
+<p>Tu presencia es nuestro mejor regalo ❤️</p>
+<p>Si deseas apoyarnos:</p>
+<button class="btn btn-gold" onclick="donar()">Donar</button>
+</section>
+
+<!-- CONFIRMAR -->
+<section id="confirmar" class="section bg-light-custom text-center fade">
+<h2>Confirma tu asistencia</h2>
+
+<input id="nombre" class="form-control w-50 mx-auto mb-3" placeholder="Tu nombre">
+
+<button class="btn btn-gold" onclick="confirmar()">
+Confirmar por WhatsApp
+</button>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark-custom text-center p-4">
+<p>Gracias por ser parte de nuestro día 💍</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// COUNTDOWN
+const target = new Date("March 20, 2027 00:00:00").getTime();
+
+setInterval(()=>{
+let now = new Date().getTime();
+let diff = target - now;
+
+let d = Math.floor(diff/(1000*60*60*24));
+let h = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+let m = Math.floor((diff%(1000*60*60))/(1000*60));
+
+document.getElementById("countdown").innerHTML =
+`${d} días ${h}h ${m}m`;
+},1000);
+
+// WHATSAPP
+function confirmar(){
+let nombre = document.getElementById("nombre").value || "Invitado";
+window.open(`https://wa.me/5210000000000?text=Hola soy ${nombre}, confirmo asistencia`);
+}
+
+// DONAR
+function donar(){
+window.open("https://wa.me/5210000000000?text=Quiero apoyar con un regalo 🎁");
+}
+
+// ANIMACIONES
+window.addEventListener("scroll",()=>{
+document.querySelectorAll(".fade").forEach(el=>{
+let top = el.getBoundingClientRect().top;
+if(top < window.innerHeight-50){
+el.classList.add("show");
+}
+});
+});
+</script>
+
+</body>
+</html>
